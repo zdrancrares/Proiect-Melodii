@@ -1,0 +1,15 @@
+1,melodie1,rares,rock
+3,melodie3,andreea,rock
+5,melodie5,marius,folk
+6,melodie6,liviu,rock
+7,melodie3,ramona,disco
+8,melodie2,liviu,pop
+9,melodie6,roxana,disco
+10,melodie2,maria,disco
+2314,melodie7,roxana,folk
+1933,pasdpasp,rares,folk
+1950,pasdpasp,marcel,folk
+1969,pasdpasp,andreea,folk
+2152,qwewq,wewew,disco
+3716,dfspdf,rares,pop
+3720,dfspdf,rares,pop
