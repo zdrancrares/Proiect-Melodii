@@ -1,12 +1,22 @@
 #include "Melodie.h"
 #include "RepoMelodie.h"
 
+/// <summary>
+/// Clasa abstracta pentru undo
+/// </summary>
 class UndoAction {
 public:
+	/// <summary>
+	/// Metoda pur virtuala care va fi implementata de toate sub-clasele pentru a efectua operatia
+	/// corecta de undo
+	/// </summary>
 	virtual void doUndo() = 0;
 	virtual ~UndoAction() {};
 };
 
+/// <summary>
+/// Clasa care face undo la operatia de adaugare a unei melodii
+/// </summary>
 class UndoAdd : public UndoAction {
 private:
 	Melodie melodieAdaugata;
@@ -18,6 +28,9 @@ public:
 	~UndoAdd() = default;
 };
 
+/// <summary>
+/// Clasa care face undo la operatia de stergere a unei melodii
+/// </summary>
 class UndoDelete : public UndoAction {
 private:
 	Melodie melodieStearsa;
@@ -29,6 +42,9 @@ public:
 	~UndoDelete() = default;
 };
 
+/// <summary>
+/// Clasa care face undo la operatia de modificare a unei melodii
+/// </summary>
 class UndoUpdate : public UndoAction {
 private:
 	Melodie melodieModificata;

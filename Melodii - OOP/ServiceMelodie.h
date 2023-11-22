@@ -7,6 +7,9 @@
 #include <algorithm>
 #include <map>
 
+/// <summary>
+/// Clasa de exceptii pentru service
+/// </summary>
 class ServiceExceptions {
 private:
 	string message;
@@ -49,6 +52,13 @@ public:
 	/// </summary>
 	/// <param name="id">id-ul melodiei de sters - int</param>
 	void sterge_melodie(int id);
+	/// <summary>
+	/// Metoda care modifica o melodie din lista de melodii
+	/// </summary>
+	/// <param name="id">id-ul melodiei de modificat</param>
+	/// <param name="titluNou">noul titlu pentru melodie</param>
+	/// <param name="artistNou">noul artist pentru melodie</param>
+	/// <param name="genNou">noul gen pentru melodie</param>
 	void modifica_melodie(int id, string titluNou, string artistNou, string genNou);
 	/// <summary>
 	/// Functie care returneaza numarul de melodii care au acelasi artist cu cel primit ca argument
@@ -68,6 +78,10 @@ public:
 	/// <param name="mel">lista de melodii de sortat - vector<Melodie></param>
 	/// <returns>lista sortata in functie de artisti</returns>
 	vector<Melodie> sortArtist(vector<Melodie> mel);
+	/// <summary>
+	/// Metoda care face undo la operatie de add, delete sau update
+	/// </summary>
+	/// <throws ServiceExceptions>Daca nu se mai poate face undo</throws>
 	void undo();
 };
 

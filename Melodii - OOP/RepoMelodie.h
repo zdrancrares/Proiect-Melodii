@@ -6,6 +6,9 @@
 
 using std::vector;
 
+/// <summary>
+/// Clasa de exceptii pentru repository
+/// </summary>
 class RepoExceptions {
 private:
 	string msg;
@@ -35,6 +38,12 @@ public:
 	//Subalgoritm care salveaza un vector de melodii in fisier
 	//param mel(vector<Melodie>) -> vectorul care se salveaza in fisier
 	void saveToFile(vector<Melodie> mel);
+	/// <summary>
+	/// Metoda care gaseste o melodie dupa id
+	/// </summary>
+	/// <param name="id">id-ul melodiei de gasit</param>
+	/// <returns>melodia(daca a fost gasita)</returns>
+	/// <throws RepoExceptions>daca melodia nu exista</throws>
 	Melodie findOne(int id);
 	/// <summary>
 	/// Metoda care adauga o melodie in repository
