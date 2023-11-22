@@ -54,13 +54,22 @@ public:
 	void reloadList(vector<Melodie> mel);
 	/// Functie care deseneaza cercuri concentrice pe ecran pentru fiecare gen in parte
 	void paintEvent(QPaintEvent* event) override;
+	/// <summary>
+	/// Functie care deschide cate o fereastra pentru fiecare gen in parte
+	/// </summary>
 	void openGenreWindows();
+	/// <summary>
+	/// Metoda update pentru observer
+	/// </summary>
 	void update();
 	~MelodieGUI() {
 		srv.removeObserver(this);
 	}
 };
 
+/// <summary>
+/// Clasa care deschide ferestrele pentru cele 4 genuri muzicale
+/// </summary>
 class GenreWindow : public QWidget, public Observer {
 	Q_OBJECT
 private:
